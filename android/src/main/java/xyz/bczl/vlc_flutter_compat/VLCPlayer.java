@@ -117,4 +117,19 @@ public class VLCPlayer implements MediaPlayer.EventListener {
         param.put("RecordPath", event.getRecordPath());
         mEventSink.success(param);
     }
+
+//    private Media createMediaWithOption(Uri uri) {
+//        Media media = new Media(mLibVLC, uri);
+//        media.addOption(":network-caching = 10");
+//        media.addOption(":file-caching= 10");
+//        media.addOption(":clock-jitter= 5");
+//        media.addOption(":clock-synchro= 0");
+//        media.addOption(":rtsp-frame-buffer-size= 1024*1024");
+//        media.addOption(":codec= \"avcodec, all\"");
+//        media.addOption(":avcodec-skiploopfilter= 0");
+//        media.addOption(":avcodec-threads= 1");
+//        media.addOption(":avcodec-skip-frame= 2");
+//        media.addOption(":avcodec-skip-idct= 2");
+//        return media;
+//    }
 }
