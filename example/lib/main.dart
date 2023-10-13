@@ -19,6 +19,11 @@ class _MyAppState extends State<MyApp> {
     '--live-caching=300',
     '--clock-jitter=10',
     '--clock-synchro=10',
+    '--avcodec-hurry-up',
+    '--avcodec-fast',
+    '--avcodec-dr',
+    '--rtsp-mcast',
+    '--rtsp-tcp',
   ]);
 
   @override
@@ -44,8 +49,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   load() async {
-    // rtmp://58.200.131.2:1935/livetv/natlgeo
-    await _controller.setDataSource(uri: "rtsp://192.168.1.38:1935");
+    await _controller.setDataSource(uri: "rtsp://192.168.68.103:1935");
   }
 
   @override
@@ -85,7 +89,7 @@ class _MyAppState extends State<MyApp> {
                 TextButton(
                     child: const Text("startRecord"),
                     onPressed: () {
-                      _controller.startRecord("/sdcard/test/");
+                      _controller.startRecord("/sdcard/test");
                     }),
                 TextButton(
                     child: const Text("stopRecord"),
